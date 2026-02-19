@@ -1,28 +1,28 @@
 # Lab setup
 
 - [1. Required steps](#1-required-steps)
-  - [1.1. Find a partner](#11-find-a-partner)
+  - [1.1. (NEW) Find a partner](#11-new-find-a-partner)
   - [1.2. Start creating a VM](#12-start-creating-a-vm)
   - [1.3. Set up your fork](#13-set-up-your-fork)
     - [1.3.1. Sign in on `GitHub`](#131-sign-in-on-github)
-    - [1.3.2. Fork the course instructors' repo](#132-fork-the-course-instructors-repo)
-    - [1.3.3. Go to your fork](#133-go-to-your-fork)
-    - [1.3.4. Enable issues](#134-enable-issues)
-    - [1.3.5. Add a classmate as a collaborator](#135-add-a-classmate-as-a-collaborator)
-    - [1.3.6. Protect your `main` branch](#136-protect-your-main-branch)
+    - [1.3.2. (NEW) Fork the course instructors' repo](#132-new-fork-the-course-instructors-repo)
+    - [1.3.3. (NEW) Go to your fork](#133-new-go-to-your-fork)
+    - [1.3.4. (NEW) Enable issues](#134-new-enable-issues)
+    - [1.3.5. (NEW) Add a classmate as a collaborator](#135-new-add-a-classmate-as-a-collaborator)
+    - [1.3.6. (NEW) Protect your `main` branch](#136-new-protect-your-main-branch)
   - [1.4. Install programs](#14-install-programs)
     - [1.4.1. Install `VS Code`](#141-install-vs-code)
     - [1.4.2. Install `Git`](#142-install-git)
     - [1.4.3. Install `Docker`](#143-install-docker)
     - [1.4.4. (`Windows` only) Install `Ubuntu 24.04` using WSL](#144-windows-only-install-ubuntu-2404-using-wsl)
-  - [1.5. Open in `VS Code` the `software-engineering-toolkit` directory](#15-open-in-vs-code-the-software-engineering-toolkit-directory)
+  - [1.5. (NEW) Open in `VS Code` the `software-engineering-toolkit` directory](#15-new-open-in-vs-code-the-software-engineering-toolkit-directory)
   - [1.6. Set up `Git`](#16-set-up-git)
     - [1.6.1. Check your `Git` config](#161-check-your-git-config)
     - [1.6.2. Configure `Git`](#162-configure-git)
   - [1.7. Clone your fork and open it in `VS Code`](#17-clone-your-fork-and-open-it-in-vs-code)
-    - [1.7.1. Copy your fork `URL`](#171-copy-your-fork-url)
-    - [1.7.2. Clone your fork](#172-clone-your-fork)
-    - [1.7.3. Open the cloned repo in `VS Code`](#173-open-the-cloned-repo-in-vs-code)
+    - [1.7.1. (NEW) Copy your fork `URL`](#171-new-copy-your-fork-url)
+    - [1.7.2. (NEW) Clone your fork](#172-new-clone-your-fork)
+    - [1.7.3. (NEW) Open the cloned repo in `VS Code`](#173-new-open-the-cloned-repo-in-vs-code)
   - [1.8. (`Windows` only) Set the default shell](#18-windows-only-set-the-default-shell)
   - [1.9. Continue creating a VM](#19-continue-creating-a-vm)
   - [1.10. Set up `Python` in `VS Code`](#110-set-up-python-in-vs-code)
@@ -30,9 +30,9 @@
     - [1.10.2. Install `Python` and dependencies](#1102-install-python-and-dependencies)
     - [1.10.3. Select the `Python` interpreter](#1103-select-the-python-interpreter)
     - [1.10.4. Check that `Python` works](#1104-check-that-python-works)
-  - [1.11. Set up the `Docker` environment](#111-set-up-the-docker-environment)
-  - [1.12. Start the services](#112-start-the-services)
-  - [1.13. Open `pgAdmin`](#113-open-pgadmin)
+  - [1.11. (NEW) Set up the `Docker` environment](#111-new-set-up-the-docker-environment)
+  - [1.12. (NEW) Start the services](#112-new-start-the-services)
+  - [1.13. (NEW) Open `pgAdmin`](#113-new-open-pgadmin)
 - [2. Optional steps](#2-optional-steps)
   - [2.1. Set up a coding agent](#21-set-up-a-coding-agent)
   - [2.2. Set up the shell prompt](#22-set-up-the-shell-prompt)
@@ -43,7 +43,7 @@
 
 ## 1. Required steps
 
-### 1.1. Find a partner
+### 1.1. (NEW) Find a partner
 
 1. Find a partner for this lab.
 2. Sit next to them.
@@ -67,29 +67,29 @@
 1. Sign in on [`GitHub`](https://github.com/).
 2. [Find `<your-github-username>`](./appendix/github.md#find-your-github-username).
 
-#### 1.3.2. Fork the course instructors' repo
+#### 1.3.2. (NEW) Fork the course instructors' repo
 
 1. [Fork](./appendix/github.md#fork-a-repo) the course instructors' repo.
 
    The course instructors' repo [URL](./appendix/web-development.md#url) is <https://github.com/inno-se-toolkit/se-toolkit-lab-3>
 
-#### 1.3.3. Go to your fork
+#### 1.3.3. (NEW) Go to your fork
 
 1. [Go to your fork](./appendix/github.md#go-to-your-fork).
 
    The [URL](./appendix/web-development.md#url) of your fork should look like `https://github.com/<your-github-username>/se-toolkit-lab-3`.
 
-#### 1.3.4. Enable issues
+#### 1.3.4. (NEW) Enable issues
 
 1. [Enable issues](./appendix/github.md#enable-issues).
 
-#### 1.3.5. Add a classmate as a collaborator
+#### 1.3.5. (NEW) Add a classmate as a collaborator
 
 1. [Add a collaborator](./appendix/github.md#add-a-collaborator) — your partner.
 2. Your partner should add you as a collaborator in their repo.
 3. It's OK if your collaborator can't change `Settings` in your repo.
 
-#### 1.3.6. Protect your `main` branch
+#### 1.3.6. (NEW) Protect your `main` branch
 
 > [!NOTE]
 > Branch protection prevents accidental pushes directly to `main`.
@@ -122,7 +122,7 @@
 1. [Check the current shell in the `VS Code Terminal`](./appendix/vs-code.md#check-the-current-shell-in-the-vs-code-terminal).
 2. [Set up running `VS Code` using `WSL`](./appendix/vs-code.md#windows-only-set-up-running-vs-code-in-wsl) if the shell is not `bash` or `zsh`.
 
-### 1.5. Open in `VS Code` the `software-engineering-toolkit` directory
+### 1.5. (NEW) Open in `VS Code` the `software-engineering-toolkit` directory
 
 1. Inside the [`Desktop` directory](./appendix/file-system.md#desktop-directory),
    create the directory `software-engineering-toolkit`.
@@ -144,7 +144,7 @@
 
 ### 1.7. Clone your fork and open it in `VS Code`
 
-#### 1.7.1. Copy your fork `URL`
+#### 1.7.1. (NEW) Copy your fork `URL`
 
 1. [Go to your fork](#33-go-to-your-fork).
 2. Copy [`<your-fork-url>`](./appendix/github.md#your-fork-url).
@@ -154,14 +154,14 @@
 > [!NOTE]
 > Here, the `<repo-name>` is `se-toolkit-lab-3`.
 
-#### 1.7.2. Clone your fork
+#### 1.7.2. (NEW) Clone your fork
 
 1. [Clone your fork](./appendix/git-vscode.md#clone-the-repo):
 
    - Replace `<repo-url>` with [`<your-fork-url>`](./appendix/github.md#your-fork-url).
    - Replace `<repo-name>` with `se-toolkit-lab-3`.
 
-#### 1.7.3. Open the cloned repo in `VS Code`
+#### 1.7.3. (NEW) Open the cloned repo in `VS Code`
 
 1. [Open in `VS Code` the directory](./appendix/git-vscode.md#open-in-vs-code-the-directory):
    `se-toolkit-lab-3`.
@@ -198,7 +198,7 @@
 
 1. [Check that `Python` works](./appendix/python.md#check-that-python-works).
 
-### 1.11. Set up the `Docker` environment
+### 1.11. (NEW) Set up the `Docker` environment
 
 1. [Run using the `VS Code Terminal`](./appendix/vs-code.md#run-a-command-using-the-vs-code-terminal):
 
@@ -215,7 +215,7 @@
 > [!TIP]
 > No edits are needed for local development. The default values in [`.env.docker.example`](../.env.docker.example) work out of the box.
 
-### 1.12. Start the services
+### 1.12. (NEW) Start the services
 
 1. [Run using the `VS Code Terminal`](./appendix/vs-code.md#run-a-command-using-the-vs-code-terminal):
 
@@ -241,7 +241,7 @@
    > To stop the services, press `Ctrl+C` in the terminal where they are running.
    > Alternatively, run `docker compose down` in a new terminal.
 
-### 1.13. Open `pgAdmin`
+### 1.13. (NEW) Open `pgAdmin`
 
 1. [Open `pgAdmin`](./appendix/pgadmin.md#open-pgadmin).
 2. [Add a server in `pgAdmin`](./appendix/pgadmin.md#add-a-server-in-pgadmin).
