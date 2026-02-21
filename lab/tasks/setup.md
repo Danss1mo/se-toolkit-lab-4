@@ -323,7 +323,15 @@ Complete these steps if you can't [connect to your VM](../appendix/vm.md#connect
 
 1. [Open `pgAdmin`](../appendix/pgadmin.md#open-pgadmin).
 2. [Add a server in `pgAdmin`](../appendix/pgadmin.md#add-a-server-in-pgadmin).
-3. [Browse tables](../appendix/pgadmin.md#browse-tables).
+3. [Browse the `interaction_logs` table](../appendix/pgadmin.md#browse-tables)
+
+   You should see rows of data stored in the database.
+
+   <img alt="Interaction logs" src="../images/tasks/setup/database-interaction-logs.png" style="width:400px">
+
+   These are records of what `learners` did with `items` (courses, labs, tasks, steps).
+   They `attempt`ed, `complete`d or just `view`ed them.
+
 4. Verify that the following tables exist and contain data:
    - `items`
    - `learners`
