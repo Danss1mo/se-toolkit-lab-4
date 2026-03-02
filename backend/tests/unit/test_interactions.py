@@ -48,3 +48,42 @@ def test_filter_excludes_interaction_with_different_learner_id():
     # because the function currently filters by learner_id instead of item_id
     assert len(result) == 1
     assert result[0].item_id == 1
+
+
+# KEEP - добавляем в test_interactions.py
+def test_filter_with_zero_item_id() -> None:
+    """Test filtering with item_id=0 (boundary value)."""
+    interactions = [
+        _make_log(1, 1, 0),
+        _make_log(2, 2, 1),
+        _make_log(3, 3, 0),
+    ]
+    result = _filter_by_item_id(interactions, 0)
+    assert len(result) == 2
+    assert all(log.item_id == 0 for log in result)
+
+
+def test_filter_with_large_item_id() -> None:
+    """Test filtering with a large item_id value (boundary - max 32-bit int)."""
+    large_id = 2_147_483_647
+    interactions = [
+        _make_log(1, 1, large_id),
+        _make_log(2, 2, 100),
+        _make_log(3, 3, large_id),
+    ]
+    result = _filter_by_item_id(interactions, large_id)
+    assert len(result) == 2
+    assert all(log.item_id == large_id for log in result)
+
+
+def test_filter_multiple_interactions_same_item_different_learners() -> None:
+    """Test filtering when multiple interactions share the same item_id."""
+    interactions = [
+        _make_log(1, 1, 10),
+        _make_log(2, 2, 10),
+        _make_log(3, 3, 10),
+        _make_log(4, 1, 20),
+    ]
+    result = _filter_by_item_id(interactions, 10)
+    assert len(result) == 3
+    assert all(log.item_id == 10 for log in result)
