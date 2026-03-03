@@ -7,6 +7,7 @@ interface Item {
   id: number
   type: string
   title: string
+  description: string
   created_at: string
 }
 
@@ -25,8 +26,8 @@ function App() {
     setLoading(true)
     setError(null)
 
-    fetch('/items', {
-      headers: { Authorization: `Bearer ${token}` },
+    fetch('/items/', {
+      headers: { Authorization: `Bearer ${token}`, 'Content-Type': 'application/json' },
     })
       .then((res) => {
         if (!res.ok) throw new Error(`HTTP ${res.status}`)
@@ -77,7 +78,7 @@ function App() {
   return (
     <div>
       <header className="app-header">
-        <h1>Items</h1>
+        <h1>My Items Collection</h1>
         <button className="btn-disconnect" onClick={handleDisconnect}>
           Disconnect
         </button>
@@ -93,6 +94,7 @@ function App() {
               <th>ID</th>
               <th>Type</th>
               <th>Title</th>
+              <th>Description</th>
               <th>Created at</th>
             </tr>
           </thead>
@@ -102,6 +104,7 @@ function App() {
                 <td>{item.id}</td>
                 <td>{item.type}</td>
                 <td>{item.title}</td>
+                <td>{item.description}</td>
                 <td>{item.created_at}</td>
               </tr>
             ))}
